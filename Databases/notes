@@ -1,0 +1,27 @@
+DB types:
+    - Key/Values:
+      Redis,  Memcached, etcd (k8s)
+      Unique keys. Read the data via keys. Fast, work from RAM. Used for caching or message queue.
+    - Wide Columns:
+      Cassandra, Apache HBase
+      Same idea just more columns. Schema-less - any value types any amount of columns. Handle large unstructured data.
+    - Document Databases:
+      MongoDB, DynamoDB (AWS), CouchBase
+      Storing data in a documents which grouped in collections and the last can have hierarchy. Schema-less - slower than previous.
+      Used for mobile app (games) etc. Can be a primary DB.
+    - Relation DBs
+      Mysql, Postgresql
+      Structured DB and needs a schema to be predefined. Uses SQL. Tables are related, duplication avoided by  if references.
+      Most popular. ACID. Hard to scale.
+    - Graph DBs
+      Neo4j, Dgraph
+      Uses nodes and edges. Used for graphs, patterns, recommendations.
+    - Search DBs
+      ElasticSearch, Solr
+      Similar to documents DBs but creates the indexes for data combinations to fasten the results.
+
+
+TODOs
+    -Check Flyway and continuous database delivery.
+
+

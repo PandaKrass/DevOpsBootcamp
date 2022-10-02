@@ -1,0 +1,22 @@
+Restrict the permissions to key
+  - Linux
+    chmod 400 ~/.ssh/small-k8s-keys.pem
+
+  - Windows
+    $path = "C:\Users\Panda\.ssh\id_rsa"
+    icacls.exe $path /reset
+    icacls.exe $path /GRANT:R "$((Get-Acl -Path $path).Owner):(R)"
+    icacls.exe $path /inheritance:r
+
+Update ec2 & install docker
+  - Update
+    sudo yum update
+  - Docker: install
+    sudo yum install docker
+    sudo service docker start
+  - Docker: add user to a group
+    ps aux | grep docker
+    sudo usermod -aG docker $USER
+    groups
+  - Docker: check image
+    docker start redis

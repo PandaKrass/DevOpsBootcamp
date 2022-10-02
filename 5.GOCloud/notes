@@ -1,0 +1,31 @@
+Digital Ocean
+  - Create droplet
+    Add key for ssh connect
+  - Add security group
+    Assign sg to a droplet
+  - Connect to a server via ssh
+    apt update
+    apt install openjdk-8-jre-headless
+  - Copy app to the server
+    .\gradlew build
+    scp .\build\libs\java-react-example.jar root@64.227.42.100:/root
+  - Run the app
+    java -jar <file> ('&' to detach)
+  - Add a new SG rule with 7071 port
+    http://64.227.42.100:7071/
+  - Check the app
+    ps aux | grep java
+  - Check the services with active connections
+    apt install net-tools
+    netstat -lpnt
+
+Create a user instead of root
+  - Add user
+    adduser kass
+  - Add group
+    usermod -aG sudo kass
+    su - kass
+  - Add ssh key for a new user
+    mkdir .ssh
+    vi auth_keys
+    mv auth_keys authorized_keys

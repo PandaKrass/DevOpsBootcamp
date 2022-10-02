@@ -1,0 +1,4 @@
+- Maven
+  Install JSDK
+  Add java to PATH
+  Create a JAVA_HOME env variable

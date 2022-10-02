@@ -3,10 +3,10 @@ SSH Connection:
  - add .pub content to github/settings/ssh
  - clone the repo
 
-
 Remove cache
  - git rm --cached
 
 Stash
  - git stash
  - git stash pop
+

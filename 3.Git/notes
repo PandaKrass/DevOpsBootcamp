@@ -10,3 +10,7 @@ Stash
  - git stash
  - git stash pop
 
+Undo
+ - git reset --hard HEAD~<n>
+ - git commit --amend : Merging changes to the last commit
+ - git revert <hash>

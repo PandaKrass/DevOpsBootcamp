@@ -1,1 +1,6 @@
-init
+SSH Connection:
+ - create a ssh key (skip the input)
+ - add .pub content to github/settings/ssh
+ - clone the repo
+
+

@@ -4,3 +4,9 @@ SSH Connection:
  - clone the repo
 
 
+Remove cache
+ - git rm --cached
+
+Stash
+ - git stash
+ - git stash pop
